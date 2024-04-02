@@ -17,4 +17,5 @@ public class NaverService {
   private String secretId;
 
   private final RestTemplate restTemplate;
+  // public NaverService(RestTemplate restTemplate){} 롬복으로 대체 
 }
