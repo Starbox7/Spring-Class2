@@ -6,6 +6,8 @@ import org.springframework.util.MultiValueMap;
 import lombok.Builder;
 import lombok.Data;
 
+// @AllArgsConstructor
+// @NoArgsConstructor 
 @Data
 @Builder //객체 생성시 new 없이 생성, 스프링에서 별도의 new 객체는 지양할것
 public class RequestDTO {
