@@ -13,7 +13,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 @Service
 public class BookService {
-  private final BookRepository bookRepository;
+  private final BookRepository bookRepository; 
 
   public BookModel save(BookModel bookModel){
     return bookRepository.save(bookModel);

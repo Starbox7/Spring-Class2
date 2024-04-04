@@ -4,9 +4,13 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.server.server.models.listener.DatePersistListener;
+import com.server.server.models.listener.Iauditable;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EntityListeners;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -27,8 +31,9 @@ import lombok.extern.slf4j.Slf4j;
 @Data
 @Builder
 @Entity
+@EntityListeners(value = DatePersistListener.class)
 @Table(name = "Reviewer")
-public class ReviewerModel {
+public class ReviewerModel implements Iauditable{
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long idx;
